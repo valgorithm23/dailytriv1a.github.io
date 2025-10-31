@@ -14,16 +14,16 @@
     </style>
   <form id="dailyQuestion">
     <h2>When were boxes invented?</h2>
-  <input type="radio" id="1805" name="type" value="Indoor" required>
+  <input type="radio" id="1805" name="type" value="1805" required>
   <label for="1805">1805</label><br>
 
-  <input type="radio" id="1822" name="type" value="Indoor" required>
+  <input type="radio" id="1822" name="type" value="1822" required>
   <label for="1822">1822</label><br>
 
-  <input type="radio" id="1817" name="type" value="Indoor" required>
+  <input type="radio" id="1817" name="type" value="1817" required>
   <label for="1817">1817</label><br>
 
-  <input type="radio" id="1830" name="type" value="Indoor" required>
+  <input type="radio" id="1830" name="type" value="1830" required>
   <label for="1830">1830</label><br>
 
   <button type="button" onclick="checkAnswer()">Submit</button>
@@ -39,21 +39,21 @@
     const resultImg = document.getElementById('resultImg');
 
       if (!selected) {
-        result.Text = "Please choose an answer.";
+        resultText.textContent = "Please choose an answer.";
         resultImg.style.display = "none";
         return;
       }
 
       if (selected.value === "1817") {
-        result.Text = "Correct! Come back tomorrow to test your skills and luck again.";
-        result.style.color = "green";
+        resultText.textContent = "Correct! Come back tomorrow to test your skills again.";
+        resultText.style.color = "green";
         resultImg.src = "https://i.pinimg.com/originals/e9/93/d1/e993d191d03335fd09a1987db3f8d39a.gif";
         resultImg.style.display = "block";
         
       } else {
-        result.Text = "Incorrect. Try again tomorrow!"
+        resultText.textContent = "Incorrect. Try again tomorrow!";
         result.style.color = "red";
-        resultImg.src = "https://upload.wikimedia.org/wikipedia/commons/1/1c/No-Symbol.png"
+        resultImg.src = "https://upload.wikimedia.org/wikipedia/commons/1/1c/No-Symbol.png";
         resultImg.style.display = "block";
       }
    }
