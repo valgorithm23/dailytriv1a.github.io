@@ -12,13 +12,13 @@
       text-align: center;
     }
     </style>
-  <form id="Daily Question">
+  <form id="dailyQuestion">
     <h2>When were boxes invented?</h2>
   <input type="radio" id="1805" name="type" value="Indoor" required>
   <label for="1805">1805</label><br>
 
   <input type="radio" id="1822" name="type" value="Indoor" required>
-  <label for="1822">1822</label><br"
+  <label for="1822">1822</label><br>
 
   <input type="radio" id="1817" name="type" value="Indoor" required>
   <label for="1817">1817</label><br>
@@ -29,29 +29,29 @@
   <button type="button" onclick="checkAnswer()">Submit</button>
   </form>
 
-  <p id="Result></p>
+  <p id="Result"></p>
   <img id="resultImg" src="https://i.pinimg.com/originals/e9/93/d1/e993d191d03335fd09a1987db3f8d39a.gif" alt="Confetti" style="display:none; width:150px; margin-top:10px;">
 
   <script>
     function checkAnswer() {
-    const selected = document.querySelector('input[name="q1"]:checked');
+    const selected = document.querySelector('input[name="type"]:checked');
     const resultText = document.getElementById('Result');
-    const resultImg = document.getElementByID('resultImg');
+    const resultImg = document.getElementById('resultImg');
 
       if (!selected) {
-        result.textContent = "Please choose an answer.";
+        result.Text = "Please choose an answer.";
         resultImg.style.display = "none";
         return;
       }
 
       if (selected.value === "1817") {
-        result.textContent = "Correct! Come back tomorrow to test your skills and luck again.";
+        result.Text = "Correct! Come back tomorrow to test your skills and luck again.";
         result.style.color = "green";
         resultImg.src = "https://i.pinimg.com/originals/e9/93/d1/e993d191d03335fd09a1987db3f8d39a.gif";
         resultImg.style.display = "block";
         
       } else {
-        result.textContent = "Incorrect. Try again tomorrow!"
+        result.Text = "Incorrect. Try again tomorrow!"
         result.style.color = "red";
         resultImg.src = "https://upload.wikimedia.org/wikipedia/commons/1/1c/No-Symbol.png"
         resultImg.style.display = "block";
@@ -60,13 +60,5 @@
 </script>
     
   
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-  <figure><img src="https://core-docs.s3.amazonaws.com/claremore_public_schools_ar/live_feed_image/image/19000336/large_65.jpg" alt="A nerdy woman."><figcaption>Here is an image of the creator of this website: Valerie Ridenour.</figcaption></figure>
 </body>
 </html>
