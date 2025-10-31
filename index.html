@@ -30,7 +30,7 @@
   </form>
 
   <p id="Result"></p>
-  <img id="resultImg" src="https://i.pinimg.com/originals/e9/93/d1/e993d191d03335fd09a1987db3f8d39a.gif" alt="Confetti" style="display:none; width:150px; margin-top:10px;">
+  <img id="resultImg" src="https://i.pinimg.com/originals/e9/93/d1/e993d191d03335fd09a1987db3f8d39a.gif" alt="Confetti" style="display:none; width:1000px; margin-top:50px;">
 
   <script>
     function checkAnswer() {
@@ -52,7 +52,7 @@
         
       } else {
         resultText.textContent = "Incorrect. Try again tomorrow!";
-        result.style.color = "red";
+        resultText.style.color = "red";
         resultImg.src = "https://upload.wikimedia.org/wikipedia/commons/1/1c/No-Symbol.png";
         resultImg.style.display = "block";
       }
